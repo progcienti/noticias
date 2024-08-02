@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornal Notícias</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="newsTitle">Notícia na hora</h1>
+    </header>
+
+
+    <nav>
+        <div class="sidebar" id="mySidebar">
+            <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+            <a href="#" class="active">Últimas notícias</a>
+            <a href="#">Política</a>
+            <a href="#">Economia</a>
+            <a href="#">Esportes</a>
+            <a href="#">Cultura</a>
+            <a href="#">Ciência</a>
+            <a href="#">Saúde</a>
+            <a href="#">Sobre</a>
+        </div>
+        
+        <div id="main">
+            <button class="open-btn" onclick="toggleMenu()">
+                <div class="menu-icon"></div>
+                <div class="menu-icon"></div>
+                <div class="menu-icon"></div>
+            </button>
+              <!-- Barra de pesquisa -->
+            <form id="searchForm" onsubmit="return false;" class="search-form">
+            <input id="searchInput" type="text" name="q" placeholder="Buscar..." class="search-input">
+            <button type="submit" class="search-button" onclick="search()">Buscar</button>
+            </form>
+<!-- Fim da barra de pesquisa -->
+
+            
+        <ul>
+            <li><a href="#">Política</a></li>
+            <li><a href="#">Economia</a></li>
+            <li><a href="#">Esportes</a></li>
+            <li><a href="#">Cultura</a></li>
+            <li><a href="#">Ciência</a></li>
+            <li><a href="#">Saúde</a></li>
+        </ul>
+    </nav>
+   <!-- Notícia 1 -->
+   <div class="news-container">
+    <!-- Notícias -->
+    <article style="background-image: url('homem\ de\ ferro.jpg');">
+        <h2>Homem de ferro</h2>
+        <p>Descrição ou resumo da notícia 1.</p>
+        <p>Data da publicação: 04/05/2024</p>
+        <a href="#">Leia mais</a>
+    </article>
+    
+    <article style="background-image: url('show\ de\ quimica.jpg');">
+        <h2>Show de quimica</h2>
+        <p>Descrição ou resumo da notícia 2.</p>
+        <p>Data da publicação: 05/05/2024</p>
+        <a href="#">Leia mais</a>
+    </article>
+    
+    <article style="background-image: url('miranha.jpg');">
+        <h2>Homem aranha</h2>
+        <p>Descrição ou resumo da notícia 3.</p>
+        <p>Data da publicação: 06/05/2024</p>
+        <a href="#">Leia mais</a>
+    </article>
+
+    <article style="background-image: url('frei\ paulino.jpg');">
+        <h2>estatua do frei paulino</h2>
+        <p>Descrição ou resumo da notícia 4.</p>
+        <p>Data da publicação: 07/05/2024</p>
+        <a href="#">Leia mais</a>
+    </article>
+    
+    <article style="background-image: url('morte\ bonaparte.jpg');">
+        <h2>Morte de Napoleão</h2>
+        <p>Descrição ou resumo da notícia 5.</p>
+        <p>Data da publicação: 08/05/2024</p>
+        <a href="#">Leia mais</a>
+    </article>
+
+    <article style="background-image: url('logo\ ifac.png');">
+        <h2>O ifac campus csm</h2>
+        <p>Descrição ou resumo da notícia 5.</p>
+        <p>Data da publicação: 08/05/2024</p>
+        <a href="#">Leia mais</a>
+    </article>  
+
+    <article style="background-image: url('planta02.jpg');">
+        <h2>As plantas</h2>
+        <p>Descrição ou resumo da notícia 5.</p>
+        <p>Data da publicação: 08/05/2024</p>
+        <a href="#">Leia mais</a>
+    </article>  
+    
+</div>
+
+
+    <footer>
+        <p>&copy; 2024 Jornal Notícias. Todos os direitos reservados.</p>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>

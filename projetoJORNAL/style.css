@@ -1,0 +1,241 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+background-color: #333;
+color: #fff;
+padding: 10px 0;
+text-align: center;
+position: relative; /* Tornar o título posicionado de forma relativa */
+}
+
+#newsTitle.move-down {
+top: 100px; /* Ou outro valor adequado */
+transition: top 0.5s; /* Adicionar transição para suavizar o movimento */
+}
+
+
+
+nav {
+    background-color: #444;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+nav ul li a {
+    color: #fff; /* Cor dos links */
+    text-decoration: none; /* Remover sublinhado dos links */
+    padding: 8px 15px; /* Espaçamento interno dos links */
+    border-radius: 10px; /* Borda arredondada dos links */
+    background-color: #5b5858; /* Cor de fundo dos links */
+    transition: background-color 0.3s; /* Transição suave ao passar o mouse */
+}
+
+nav ul li a:hover {
+    background-color: #b02828; /* Cor de fundo dos links ao passar o mouse */
+}
+
+article {
+    padding: 20px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 80px; /* Ajuste o valor conforme necessário para garantir que o conteúdo da barra de menu esteja alinhado corretamente */
+    z-index: 2; /* Definindo um valor de z-index maior */
+}
+
+
+
+.sidebar a {
+padding: 10px 15px;
+text-decoration: none;
+font-size: 20px;
+color: white;
+display: block;
+transition: 0.3s;
+}
+.sidebar a:hover {
+background-color: #ddd;
+color: black;
+}
+.sidebar .close-btn {
+position: absolute;
+top: 0;
+right: 25px;
+font-size: 36px;
+margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+.sidebar {padding-top: 15px;}
+.sidebar a {font-size: 18px;}
+}
+.open-btn {
+background-color: #333;
+color: white;
+border: none;
+cursor: pointer;
+position: fixed;
+top: 20px;
+left: 20px;
+font-size: 24px;
+padding: 10px;
+z-index: 999;
+border-radius: 10%; 
+}
+.menu-icon {
+width: 30px;
+height: 3px;
+background-color: #fff;
+margin: 6px 0;
+border-radius: 2px;
+transition: background-color 0.3s;
+}
+.menu-icon.show-menu:before {
+content: "";
+display: block;
+width: 30px;
+height: 3px;
+background-color: #fff;
+margin: 6px 0;
+border-radius: 2px;
+}
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    transition: top 0.3s; /* Adiciona uma transição suave para o movimento */
+    z-index: 1000; /* Define a camada de sobreposição da barra de menu */
+}
+
+.search-form {
+    position: fixed; /* Fixa a barra de pesquisa */
+    top: 20px; /* Ajusta a distância do topo da tela */
+    left: calc(75% - 10px); /* Centraliza horizontalmente */
+    display: flex;
+    align-items: center;
+    z-index: 1000; /* Define a camada de sobreposição da barra de pesquisa */
+}
+
+
+
+
+.search-input {
+    padding: 8px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+    width: 250px;
+}
+
+.search-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #555;
+}
+        /* Container para as notícias */
+        .news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre as notícias */
+}
+
+/* Estilo para cada notícia */
+article {
+    width: 300px; /* Largura fixa para cada notícia */
+    height: 300px; /* Altura fixa para cada notícia */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out; /* Transição suave ao passar o mouse */
+}
+
+/* Efeito de hover nas notícias */
+article:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para o conteúdo dentro das notícias */
+article h2,
+article p,
+article a {
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+article h2 {
+    top: 50px;
+    font-size: 24px;
+}
+
+article p {
+    top: 120px;
+    font-size: 16px;
+}
+
+article a {
+    bottom: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+article a:hover {
+    background-color: #0056b3;
+}

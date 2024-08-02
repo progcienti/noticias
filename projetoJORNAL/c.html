@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-wrap: wrap; /* Permitindo que os elementos sejam envoltos (quebrem linha) */
+        }
+
+        article {
+            position: relative;
+            width: 350px;
+            height: 250px;
+            margin: 20px; /* Espaçamento entre os quadros */
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out; /* Adicionando uma transição suave */
+        }
+
+        article:hover {
+            transform: scale(1.05); /* Aumentando ligeiramente o tamanho quando o cursor está sobre a notícia */
+        }
+
+        article h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        article p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        article a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        article a:hover {
+            text-decoration: underline;
+        }
+
+        /* Adicionando a imagem */
+        article::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.7; /* Opacidade da imagem */
+            transition: opacity 0.3s ease-in-out; /* Adicionando uma transição suave */
+        }
+
+        article:hover::after {
+            opacity: 0.5; /* Diminuindo ligeiramente a opacidade quando o cursor está sobre a imagem */
+        }
+    </style>
+</head>
+<body>
+    <article style="background-image: url('homem\ de\ ferro.jpg');">
+        <h2>Título da Notícia 1</h2>
+        <p>Descrição ou resumo da notícia 1.</p>
+        <p>Data da publicação: 04/05/2024</p>
+        <a href="#">Leia mais</a> <!-- Link para a matéria completa da notícia 1 -->
+    </article>
+    
+    <article style="background-image: url('show\ de\ quimica.jpg');">
+        <h2>Título da Notícia 2</h2>
+        <p>Descrição ou resumo da notícia 2.</p>
+        <p>Data da publicação: 05/05/2024</p>
+        <a href="#">Leia mais</a> <!-- Link para a matéria completa da notícia 2 -->
+    </article>
+    
+    <article style="background-image: url('miranha.jpg');">
+        <h2>Título da Notícia 3</h2>
+        <p>Descrição ou resumo da notícia 3.</p>
+        <p>Data da publicação: 06/05/2024</p>
+        <a href="#">Leia mais</a> <!-- Link para a matéria completa da notícia 3 -->
+    </article>
+
+    <!-- Adicione mais notícias abaixo -->
+    <article style="background-image: url('sua\ imagem.jpg');">
+        <h2>Título da Notícia 4</h2>
+        <p>Descrição ou resumo da notícia 4.</p>
+        <p>Data da publicação: 07/05/2024</p>
+        <a href="#">Leia mais</a> <!-- Link para a matéria completa da notícia 4 -->
+    </article>
+    
+    <article style="background-image: url('sua\ outra\ imagem.jpg');">
+        <h2>Título da Notícia 5</h2>
+        <p>Descrição ou resumo da notícia 5.</p>
+        <p>Data da publicação: 08/05/2024</p>
+        <a href="#">Leia mais</a> <!-- Link para a matéria completa da notícia 5 -->
+    </article>
+    <article style="background-image: url('sua\ outra\ imagem.jpg');">
+        <h2>Título da Notícia 5</h2>
+        <p>Descrição ou resumo da notícia 5.</p>
+        <p>Data da publicação: 08/05/2024</p>
+        <a href="#">Leia mais</a> <!-- Link para a matéria completa da notícia 5 -->
+    </article>
+    
+</body>
+</html>
